@@ -1,0 +1,15 @@
+.filterContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.name{
+    padding: 0.5rem 1rem;
+    font-weight:bold;
+    color: rgb(22, 233, 85);
+    border-radius: 10px;
+    font-size: 1.3rem;
+    transition: background-color 0.5s;
+    border: 2px solid transparent;
+}

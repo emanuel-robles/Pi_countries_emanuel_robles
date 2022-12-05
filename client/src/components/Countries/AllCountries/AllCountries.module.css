@@ -1,0 +1,9 @@
+.country {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 1.5rem;
+    min-width: 1220px;
+    min-height: 570px;
+    padding: 1rem;
+    gap: 2rem;
+}

@@ -1,0 +1,39 @@
+.button {
+
+    color: white;
+
+}
+
+.img {
+    padding: 1rem;
+    border: 2px solid rgb(22, 19, 216);
+    text-decoration:double;
+    color: aqua;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcfc;
+}
+
+.btn {
+    background-color: #0e0e14;
+    ;
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    border: 2px solid white;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    background-color: #000000;
+    ;
+}

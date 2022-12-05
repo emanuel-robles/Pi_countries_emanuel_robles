@@ -1,0 +1,17 @@
+.pages {
+    margin: 1rem;
+    border: 2px solid white;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    background-color: #0000008a;
+}
+
+.btnPage {
+    color: white;
+    margin: 0.3rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    background-color: rgb(21, 190, 111);
+    border: 0;
+    cursor: pointer;
+}
