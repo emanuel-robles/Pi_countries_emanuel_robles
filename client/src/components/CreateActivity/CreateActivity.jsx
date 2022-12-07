@@ -39,7 +39,7 @@ const CreateActivity = () => {
     countries: { all: [], error: false }
   });
 
-  const [alertInfo, setAlertInfo] = useState({ title: '', text: '', textBTN: '', type: '' });
+  const [alertInfo, setAlertInfo] = useState({ title: '', text: '', textOK: '', type: '' });
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -141,8 +141,8 @@ const CreateActivity = () => {
     if (!/[0-9]/.test(e.key)) e.preventDefault();
   }
 
-  const showAlert = (title, text, textBTN, type) => {
-    setAlertInfo({ title, text, textBTN, type, showed: true });
+  const showAlert = (title, text, textOK, type) => {
+    setAlertInfo({ title, text, textOK, type, showed: true });
   }
 
   useEffect(() => {
@@ -282,7 +282,7 @@ const CreateActivity = () => {
         <Alert 
           title={alertInfo.title}
           text={alertInfo.text}
-          textBTN={alertInfo.textBTN}
+          textOK={alertInfo.textOK}
           type={alertInfo.type}
           background={containerAlert}
         />

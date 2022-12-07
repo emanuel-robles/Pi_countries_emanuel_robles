@@ -24,7 +24,7 @@ const AllCountries = ({ filteredCountries, limit }) => {
                 :
                 countries.map((country) => {
                     return (
-                        <div key={country.id} className={style.img} >
+                        <div key={country.id}  >
                             <Link to={`/details/${country.id}`}>
                                 <Card 
                                     name={country.name}

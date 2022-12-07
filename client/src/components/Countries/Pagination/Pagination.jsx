@@ -5,7 +5,6 @@ const Pagination = ({ countries, setLimit, setPageNumber }) => {
 
     const handleOnClickPage = (e) => {
 //previene que una pagina no se recargue 
-        //probar mi aplicacion comentando la linea 8.
         e.preventDefault();
 
         const page = Number(e.target.innerText);

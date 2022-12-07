@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {  useParams, useNavigate } from 'react-router-dom';
+import {  useParams} from 'react-router-dom';
 
 
-import { cleanCountryId, getCountries, getCountryById } from './../../redux/actions/countries';
+import { cleanCountryId,  getCountryById } from './../../redux/actions/countries';
 import { difficulties, subregions } from '../../utils/utils';
 
 import style from './CountryDetails.module.css';
@@ -12,46 +12,24 @@ import style from './CountryDetails.module.css';
 
 
 const CountryDetails = () => {
-  const [count,setcount]= useState(0)
-  const countRef = useRef(0);
-  const counter = useSelector((state) => state.counter)
+
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const params = useParams();
   const country = useSelector(state => state.countries.countryById);
-  const allCountries = useSelector(state => state.countries.countries);
   const [infoCountry, setInfoCountry] = useState({});
 
   const moreInfo = useRef();
   const moreInfoContainer = useRef();
 
-  const [randomCountry, setRandomCountry] = useState(false);
+
 
   const formatNumber = (num) => {
     let str = num.toString().split(".");
     str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     return str.join(".");
   }
-  function handleAddOne() {
-    countRef.current += 1;
-  }
-  const randomPage = () => {
-    setRandomCountry(true);
-    if (!allCountries.length) return dispatch(getCountries());
-    const max = allCountries.length - 1;
-    const numRandom = Math.round(Math.random() * max);
-    const country = allCountries[numRandom];
-    window.scroll({
-      top: 0,
-      left: 0
-    });
-    dispatch(cleanCountryId());
-    navigate(`/details/${country.id}`);
-  }
-  const likes = ()=> {
-    setcount(count + 1)
-  }
+
 
   const handleBtnImg = () => {
     moreInfoContainer.current.classList.add(style.animationFlag);
@@ -59,11 +37,7 @@ const CountryDetails = () => {
   }
 
 
-  useEffect(() => {
-    if (randomCountry) {
-      randomPage();
-    }
-  }, [allCountries]);
+
 
   useEffect(() => {
     if (!country.data) dispatch(getCountryById(params.id));
@@ -106,17 +80,9 @@ const CountryDetails = () => {
                       <img src={infoCountry.flag} alt={`${infoCountry.name} flag`} />
                     </button>
                   </div>
-                  <div>
-                    
-                    <button onClick={likes} > Like </button>
-                    <p value={count} >{count}</p>
-                    <p>{counter} </p>  
-                  </div>
+        
                   <>
-      <h1>Count: {countRef.current}</h1>
-
-      {/* clicking this will not change display count */}
-      <button onClick={handleAddOne}>{count}</button>
+   
     </>
                 <div >
                   <div >
@@ -184,7 +150,7 @@ const CountryDetails = () => {
               </div>
             
             </>
-            : "Hola Mundo"
+            : ""
         }
     
       </div>

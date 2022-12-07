@@ -13,15 +13,3 @@
     border-top-right-radius: 50px;
     margin-bottom: 1.3rem;
 }
-
-.container h3 {
-    font-size: 2rem;
-    margin: 0;
-    padding: 1rem;
-}
-
-@media screen and (max-width: 930px) {
-    .container {
-        margin: 2rem 1rem 5rem 1rem;
-    }
-}

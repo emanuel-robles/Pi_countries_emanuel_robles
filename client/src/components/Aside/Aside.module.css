@@ -25,7 +25,7 @@
 }
 .search{
     padding: 0.5rem 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: #000000e3;
     border-radius: 10px;
     font-size: 1.3rem;
@@ -41,8 +41,6 @@
     transition: background-color 0.5s;
     border: 2px solid transparent;
 }
-
-
 
 .container {
     background-color: var(--color-gray);
@@ -130,30 +128,4 @@ select {
 
 .icon {
     padding-right: 1rem;
-}
-
-
-@media screen and (max-width: 930px) {
-    .container {
-        position: absolute;
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
-        background: #002339;
-        left: 0px;
-        top: -1000px;
-        text-align: center;
-        transition: left .5s;
-        z-index: 1;
-        width: 100%;
-        transition: top 0.5s ease-in-out;
-    }
-    .btnMenuFilters {
-        display: block;
-    }
-
-    .showContainer {
-        top: 120px;
-    }
-    
 }

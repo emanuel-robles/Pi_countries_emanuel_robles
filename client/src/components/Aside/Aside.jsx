@@ -15,7 +15,8 @@ const Aside = () => {
         name: '',
         order: '', // este hace referencia a alfabeticamente y por poblacion
         continent: '',
-        activity: ''
+        activity: '',
+        capital: ''
     });
     const [searchedCountry, setSearchedCountry] = useState({ value: '' });
 
@@ -37,7 +38,7 @@ const Aside = () => {
         orderAlphabetically.current.selectedIndex = 0;
         orderPopulation.current.selectedIndex = 0;
         orderActivity.current.selectedIndex = 0;
-        setActualFilters({ name: '', order: '', continent: '', activity: '' })
+        setActualFilters({ name: '', order: '', continent: '', activity: '', capital: '' })
   
     }
 
@@ -55,6 +56,7 @@ const Aside = () => {
     
         setActualFilters(state => { return { ...state, continent: e.target.value } });
     }
+
 
     const handleAlphabeticallySelect = (e) => {
  
@@ -102,10 +104,13 @@ const Aside = () => {
                         </form>
                     </div>
                 </div>
+            
+
 
                 <FieldAside 
                     id={'continent'}
                     text={'Order by Continent'}
+
                 >
                     <select  className={style.container__form}  onChange={handleContinentSelect} ref={orderContinent} defaultValue={'All'}  id="continent">
                         {Array.from(['All', 'Africa', 'Antarctica', 'Asia', 'Europe', 'South America', 'North America', 'Oceania']).map((continent) => {

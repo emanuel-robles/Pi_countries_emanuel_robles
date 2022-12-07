@@ -5,7 +5,7 @@ import imgError from '../../img/error_icon.png';
 
 import style from './Alert.module.css'
 import styleBackground from '../CreateActivity/CreateActivity.module.css';
-const Alert = ({ title, text, textBTN, background, type }) => {
+const Alert = ({ title, text, textOK, background, type }) => {
 
     const alert = useRef();
 
@@ -20,7 +20,8 @@ const Alert = ({ title, text, textBTN, background, type }) => {
             <img className={style.img}  src={type === 'success' ? imgOK : imgError} alt={'Icon'} />
             <h3 >{title}</h3>
             <p>{text}</p>
-            <button onClick={handleOnClick}  href='#'>{textBTN}</button>
+            <label  onClick={handleOnClick}  href='#' >{textOK}</label>
+       
         </div>
     )
 }

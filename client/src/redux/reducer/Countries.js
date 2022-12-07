@@ -20,7 +20,7 @@ export default function countries(state = initialState, { type, payload }) {
         case GET_ALL_COUNTRIES:
             return { ...state, countries: payload, filteredCountries: payload, loaded: true }
         case FILTER_COUNTRIES:
-            let { filterByName, activity, order, continent } = payload;
+            let { filterByName, activity, order, continent} = payload;
             if (continent && continent !== 'All') filterByName = filterByName.filter((c) => c.continent === continent);
 
             if (activity && activity !== 'All') filterByName = filterByName.filter((c) => {

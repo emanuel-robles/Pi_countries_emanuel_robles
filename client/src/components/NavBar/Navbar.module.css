@@ -60,38 +60,3 @@ li:last-child {
 .btnMenu:hover {
     background-color: #000;
 }
-
-@media screen and (max-width: 930px) {
-
-    .list {
-        position: absolute;
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
-        background: #191919;
-        left: -1000px;
-        top: 40px;
-        text-align: center;
-        z-index: 1;
-        transition: left .5s;
-        z-index: 2;
-    }
-
-    li:last-child {
-        margin-right: 0;
-    }
-
-    .btn {
-        display: block;
-        width: 250px;
-        background-color: #191919;
-    }
-
-    .containerMenu {
-        display: block;
-    }
-
-    .visible {
-        left: 0;
-    }
-}

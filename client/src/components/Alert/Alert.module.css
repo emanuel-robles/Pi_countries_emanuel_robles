@@ -15,13 +15,6 @@
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
 }
-
-.openPopUp {
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
-
 .img {
     width: 25%;
     margin-top: -60px;
@@ -35,42 +28,4 @@
     border: 2px;
     top: 200px;
     display: inline-block
-
-
-
-
-
-}
-
-.title {
-    font-size: 1.4rem;
-}
-
-.btn {
-    margin-top: 1rem;
-    background: none;
-    background-color: #28A128;
-    cursor: pointer;
-    color: white;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    border-radius: 10px;
-    border: 2px solid #191919;
-    transition: background-color 0.5s;
-}
-
-.btn:hover {
-    background-color: #057205;
-}
-
-@media screen and (max-width: 530px) {
-    .popup {
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 330px) {
-    .popup {
-        width: 250px;
-    }
 }

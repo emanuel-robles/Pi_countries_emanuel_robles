@@ -1,3 +1,6 @@
+.showVisibility {
+    visibility: visible;
+}
 .btn_Act {
     padding: 0.5rem 1rem;
     color: white;
@@ -269,9 +272,7 @@
     background-color: #940019;
 }
 
-.showVisibility {
-    visibility: visible;
-}
+
 
 @media screen and (max-width: 580px) {
 
